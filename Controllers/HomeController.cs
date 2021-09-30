@@ -18,6 +18,11 @@ namespace CatCafe.Controllers
             _logger = logger;
         }
 
+        public IActionResult CadastroGatos()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult CadastroGatos(CadastroGatos cadastroGatos)
         {
