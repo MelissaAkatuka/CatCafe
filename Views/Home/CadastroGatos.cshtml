@@ -1,0 +1,28 @@
+﻿@model CadastroGatos
+
+<h1>Cadastro do Gato</h1>
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Nome">Digite o Nome do gato</label>
+        <input asp-for="Nome" />
+        <span asp-validation-for="Nome"></span>
+    </div>
+    <div>
+        <label asp-for="Especie">Digite a Espécie do gato</label>
+        <input asp-for="Especie" />
+        <span asp-validation-for="Especie"></span>
+    </div>
+    <div>
+        <label asp-for="EhAlugavel">O gato é alugável?</label>
+        <select asp-for="EhAlugavel">
+            <option value="">Escolha a opção</option>
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+        <span asp-validation-for="EhAlugavel"></span>
+    </div>
+    <button type="submit">Cadastrar</button>
+
+</form>

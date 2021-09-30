@@ -18,6 +18,29 @@ namespace CatCafe.Controllers
             _logger = logger;
         }
 
+        [HttpPost]
+        public IActionResult CadastroGatos(CadastroGatos cadastroGatos)
+        {
+            //if(cadastroGatos.EhAlugavel != null)
+            //{
+            //    return RedirectToAction("Index");
+            //}
+
+            if (ModelState.IsValid)
+            {
+                Repositorio.AdicionaGato(cadastroGatos);
+                return RedirectToAction("Index");
+            }
+
+           return View(cadastroGatos);
+        }
+
+        public IActionResult Cadastrados()
+        {
+            var cadastrados = Repositorio.Gatos.Where(x => x.EhAlugavel == true);
+            return View(cadastrados);
+        }
+
         public IActionResult Index()
         {
             return View();
