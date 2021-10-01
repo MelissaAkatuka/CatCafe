@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-
 namespace CatCafe.Controllers
 {
     public class HomeController : Controller
@@ -44,6 +43,24 @@ namespace CatCafe.Controllers
         {
             var cadastrados = Repositorio.Gatos.Where(x => x.EhAlugavel == true);
             return View(cadastrados);
+        }
+
+        public IActionResult EmpresteGatos()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult EmpresteGatos(EmpresteGatos emprestimo)
+        {
+            if (ModelState.IsValid)
+            {
+                Repositorio.EmprestaGato(emprestimo);
+                Repositorio.AdicionaEmprestimo(emprestimo);
+                return RedirectToAction("Index");
+            }
+
+            return View(emprestimo);
         }
 
         public IActionResult Index()

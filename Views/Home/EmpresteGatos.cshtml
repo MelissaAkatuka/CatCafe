@@ -1,0 +1,33 @@
+﻿@model Tuple<EmpresteGatos, Repositorio>
+
+<h1>Empréstimo de um gato</h1>
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="EmpresteGatos.NomeCliente">Nome do cliente</label>
+            <input asp-for="NomeCliente" />
+        </div>
+        <div>
+            <label asp-for="EmailCliente">Email do cliente</label>
+            <input asp-for="EmailCliente" />
+        </div>
+        <div>
+            <label asp-for="TelefoneCliente">Telefone do cliente</label>
+            <input asp-for="TelefoneCliente"/>
+        </div>
+        <div>
+            <label asp-for="NomeGato">Selecione o gato que será emprestado</label>
+           <select asp-for="NomeGato">
+                @{
+                    foreach (var gato in Repositorio.Gatos.Where(x => x.EhAlugavel == true && x.EstaAlugado == false))
+                    {
+                        
+                        <option value="gato.Nome">gato.Nome</option>
+                    } //ajuda
+                }
+            </select>
+        </div>    
+    <button type="submit">Emprestar</button>
+
+</form>

@@ -716,3 +716,5 @@ C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\Debug\net5.0\ref\CatCafe.dll
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\Debug\net5.0\CatCafe.pdb
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\Debug\net5.0\CatCafe.genruntimeconfig.cache
+C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\Debug\net5.0\Razor\Views\Home\EmpresteGatos.cshtml.g.cs
+C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\Debug\net5.0\Razor\Views\Confirmacoes\EmprestimoConfirmado.cshtml.g.cs
