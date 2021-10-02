@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatCafe.Models
 {
-    public class CadastroGatos
+    public class CadastroGato
     {
         [Required(ErrorMessage = "O nome é obrigatório")]
         public String Nome { get; set; }
