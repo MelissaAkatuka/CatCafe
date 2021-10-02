@@ -8,6 +8,7 @@ namespace CatCafe.Models
 {
     public class CadastroGato
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "O nome é obrigatório")]
         public String Nome { get; set; }
 
