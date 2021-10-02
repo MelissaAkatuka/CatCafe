@@ -18,13 +18,13 @@ namespace CatCafe.Controllers
             _logger = logger;
         }
 
-        public IActionResult CadastroGatos()
+        public IActionResult CadastroGato()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult CadastroGatos(CadastroGato cadastroGatos)
+        public IActionResult CadastroGato(CadastroGato cadastroGato)
         {
             //if(cadastroGatos.EhAlugavel != null)
             //{
@@ -33,11 +33,11 @@ namespace CatCafe.Controllers
 
             if (ModelState.IsValid)
             {
-                Repositorio.AdicionaGato(cadastroGatos);
+                Repositorio.AdicionaGato(cadastroGato);
                 return RedirectToAction("Index");
             }
 
-            return View(cadastroGatos);
+            return View(cadastroGato);
         }
 
         public IActionResult Cadastrados()
@@ -46,7 +46,7 @@ namespace CatCafe.Controllers
             return View(cadastrados);
         }
 
-        public IActionResult EmpresteGatos()
+        public IActionResult EmprestimoGato()
         {
             //retorna lista dos gatos
             var listaGatos = Repositorio.Gatos.Where(x => x.EhAlugavel == true && x.EstaAlugado == false).Select(x =>
@@ -60,7 +60,7 @@ namespace CatCafe.Controllers
         }
 
         [HttpPost]
-        public IActionResult EmpresteGatos(EmprestimoGato emprestimo)
+        public IActionResult EmprestimoGato(EmprestimoGato emprestimo)
         {
             if (ModelState.IsValid)
             {

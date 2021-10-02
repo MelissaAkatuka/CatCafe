@@ -1,4 +1,4 @@
-﻿@model EmpresteGatos
+﻿@model EmprestimoGato
 
 <h1>Empréstimo de um gato</h1>
 
@@ -18,7 +18,9 @@
         </div>
         <div>
             <label asp-for="NomeGato">Selecione o gato que será emprestado</label>
-           <select asp-for="NomeGato" asp-items="@ViewBag.bagListaGatos"></select>
+           <select asp-for="NomeGato" asp-items="@ViewBag.bagListaGatos">
+            <option value="">Escolha a opção</option>
+           </select>
         </div>    
     <button type="submit">Emprestar</button>
 

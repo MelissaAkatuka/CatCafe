@@ -99,7 +99,6 @@ C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\Microsoft.Extensions.Configuration.Xml.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -157,7 +156,6 @@ C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\System.Data.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\System.Diagnostics.Contracts.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\System.Diagnostics.Debug.dll
-C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\System.Diagnostics.EventLog.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\System.Diagnostics.FileVersionInfo.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\refs\System.Diagnostics.Process.dll
@@ -355,7 +353,6 @@ C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\ref\CatCafe.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\CatCafe.pdb
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\CatCafe.genruntimeconfig.cache
-C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Home\CadastroGatos.cshtml.g.cs
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Cadastrados.cshtml.g.cs
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\bin\Debug\net5.0\appsettings.json
@@ -719,4 +716,9 @@ C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\Debug\net5.0\Razor\Views\Home\EmpresteGatos.cshtml.g.cs
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\Debug\net5.0\Razor\Views\Confirmacoes\EmprestimoConfirmado.cshtml.g.cs
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Confirmacoes\EmprestimoConfirmado.cshtml.g.cs
-C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Home\EmpresteGatos.cshtml.g.cs
+C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Home\CadastroGato.cshtml.g.cs
+C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Home\EmprestimoGato.cshtml.g.cs

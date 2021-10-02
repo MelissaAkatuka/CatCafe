@@ -1,1 +1,15 @@
 *.dll
+*.json
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# System Files
+.DS_Store
+Thumbs.db
+
+bin/
