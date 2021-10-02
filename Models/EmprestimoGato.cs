@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatCafe.Models
 {
-    public class EmpresteGatos
+    public class EmprestimoGato
     { 
         public int Id { get; set; }
 
@@ -29,10 +29,5 @@ namespace CatCafe.Models
         public DateTime DataDevolucao { get; set; }
 
         public DateTime? DataDevolvido { get; set; }
-
-        //public static string ToString(EmpresteGatos emprestimo)
-        //{
-        //    return $"Cliente: {emprestimo.NomeCliente}, gato: {emprestimo.NomeGato}, data de devolução";
-        //}
     }
 }

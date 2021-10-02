@@ -24,7 +24,7 @@ namespace CatCafe.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastroGatos(CadastroGatos cadastroGatos)
+        public IActionResult CadastroGatos(CadastroGato cadastroGatos)
         {
             //if(cadastroGatos.EhAlugavel != null)
             //{
@@ -60,11 +60,10 @@ namespace CatCafe.Controllers
         }
 
         [HttpPost]
-        public IActionResult EmpresteGatos(EmpresteGatos emprestimo)
+        public IActionResult EmpresteGatos(EmprestimoGato emprestimo)
         {
             if (ModelState.IsValid)
             {
-                Repositorio.EmprestaGato(emprestimo);
                 Repositorio.AdicionaEmprestimo(emprestimo);
                 return RedirectToAction("Index");
             }

@@ -5,28 +5,25 @@ using System.Threading.Tasks;
 
 namespace CatCafe.Models
 {
-    public class Repositorio
+    public class Repositorio : IRepositorio
     {
         //retorna lista de todas as cofirmações
         //guarda a lista de todas as submissões
-        private static List<CadastroGatos> gatos = new List<CadastroGatos>();
-        public static IEnumerable<CadastroGatos> Gatos { get => gatos; }
+        private static List<CadastroGato> gatos = new List<CadastroGato>();
+        public static IEnumerable<CadastroGato> Gatos { get => gatos; }
 
-        private static List<EmpresteGatos> emprestimos = new List<EmpresteGatos>();
-        public static IEnumerable<EmpresteGatos> Emprestimos { get => emprestimos; }
-        public static void AdicionaGato(CadastroGatos cadastroGatos)
+        private static List<EmprestimoGato> emprestimos = new List<EmprestimoGato>();
+        public static IEnumerable<EmprestimoGato> Emprestimos { get => emprestimos; }
+
+        public static void AdicionaGato(CadastroGato cadastroGatos)
         {
             gatos.Add(cadastroGatos);
         }
 
-        public static void EmprestaGato(EmpresteGatos emprestimo)
+        public static void AdicionaEmprestimo(EmprestimoGato emprestimo)
         {
             var gatoEmprestado = gatos.FirstOrDefault(x => x.Nome == emprestimo.NomeGato);
             gatoEmprestado.EstaAlugado = true;
-        }
-
-        public static void AdicionaEmprestimo(EmpresteGatos emprestimo)
-        {
             emprestimos.Add(emprestimo);
         }
     }
