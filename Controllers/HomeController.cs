@@ -1,5 +1,6 @@
 ﻿using CatCafe.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace CatCafe.Controllers
                 return RedirectToAction("Index");
             }
 
-           return View(cadastroGatos);
+            return View(cadastroGatos);
         }
 
         public IActionResult Cadastrados()
@@ -47,6 +48,14 @@ namespace CatCafe.Controllers
 
         public IActionResult EmpresteGatos()
         {
+            //retorna lista dos gatos
+            var listaGatos = Repositorio.Gatos.Where(x => x.EhAlugavel == true && x.EstaAlugado == false).Select(x =>
+            {
+                return new SelectListItem() { Text = x.Nome, Value = x.Id.ToString() };
+            });
+
+            ViewBag.bagListaGatos = listaGatos;
+
             return View();
         }
 
@@ -59,6 +68,12 @@ namespace CatCafe.Controllers
                 return RedirectToAction("Index");
             }
 
+            var listaGatos = Repositorio.Gatos.Where(x => x.EhAlugavel == true && x.EstaAlugado == false).Select(x =>
+            {
+                return new SelectListItem() { Text = x.Nome, Value = x.Id.ToString() };
+            });
+
+            ViewBag.bagListaGatos = listaGatos;
             return View(emprestimo);
         }
 
