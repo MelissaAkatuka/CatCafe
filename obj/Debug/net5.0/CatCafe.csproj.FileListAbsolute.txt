@@ -353,7 +353,6 @@ C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\ref\CatCafe.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\CatCafe.pdb
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\CatCafe.genruntimeconfig.cache
-C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Cadastrados.cshtml.g.cs
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\bin\Debug\net5.0\appsettings.json
 C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\bin\Debug\net5.0\CatCafe.exe
@@ -722,3 +721,4 @@ C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Home\CadastroGato.cshtml.g.cs
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Home\EmprestimoGato.cshtml.g.cs
+C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Home\Cadastrados.cshtml.g.cs
