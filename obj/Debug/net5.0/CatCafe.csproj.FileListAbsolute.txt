@@ -740,3 +740,4 @@ C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\
 =======
 C:\Users\Visitante\Documents\UCode\Back-end\Paulo\Projeto\CatCafe\obj\Debug\net5.0\Razor\Views\Home\Cadastrados.cshtml.g.cs
 >>>>>>> 65cb3dd2343c77743032316bec57a28f9bb89c64
+C:\Users\bcast\Documents\CODING\.NET + Angular (aulas)\.NET\CatCafe\CatCafe\obj\Debug\net5.0\Razor\Views\Home\Cadastrados.cshtml.g.cs
