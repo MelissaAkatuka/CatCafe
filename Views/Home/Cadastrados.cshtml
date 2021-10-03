@@ -1,0 +1,6 @@
+﻿@model IEnumerable<CadastroGato>
+<pre>Nome | Especie | É Alugável? | Está Alugado?</pre>
+@foreach (var cadastrados in Model)
+{
+    <pre>@cadastrados.Nome | @cadastrados.Especie | @cadastrados.EhAlugavel | @cadastrados.EstaAlugado</pre>
+}

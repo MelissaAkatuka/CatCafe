@@ -44,8 +44,10 @@ namespace CatCafe.Controllers
 
         public IActionResult Cadastrados()
         {
-            var cadastrados = Repositorio.Gatos.Where(x => x.EhAlugavel == true);
-            return View(cadastrados);
+            //retorna lista dos gatos
+            var listaGatos = Repositorio.Gatos;
+
+            return View(listaGatos);
         }
 
         public IActionResult EmprestimoGato()
