@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Visitante\\Documents\\UCode\\Back-end\\Paulo\\Projeto\\CatCafe\\CatCafe.csproj": {}
+    "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\CatCafe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Visitante\\Documents\\UCode\\Back-end\\Paulo\\Projeto\\CatCafe\\CatCafe.csproj": {
+    "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\CatCafe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Visitante\\Documents\\UCode\\Back-end\\Paulo\\Projeto\\CatCafe\\CatCafe.csproj",
+        "projectUniqueName": "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\CatCafe.csproj",
         "projectName": "CatCafe",
-        "projectPath": "C:\\Users\\Visitante\\Documents\\UCode\\Back-end\\Paulo\\Projeto\\CatCafe\\CatCafe.csproj",
-        "packagesPath": "C:\\Users\\Visitante\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Visitante\\Documents\\UCode\\Back-end\\Paulo\\Projeto\\CatCafe\\obj\\",
+        "projectPath": "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\CatCafe.csproj",
+        "packagesPath": "C:\\Users\\bcast\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Visitante\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\bcast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -46,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[5.0.9, )"
@@ -73,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

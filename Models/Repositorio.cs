@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CatCafe.Controllers;
 
 namespace CatCafe.Models
 {
@@ -20,9 +21,8 @@ namespace CatCafe.Models
             gatos.Add(cadastroGatos);
         }
 
-        public static void AdicionaEmprestimo(EmprestimoGato emprestimo)
+        public static void AdicionaEmprestimo(EmprestimoGato emprestimo, CadastroGato gatoEmprestado)
         {
-            var gatoEmprestado = gatos.FirstOrDefault(x => x.Nome == emprestimo.NomeGato);
             gatoEmprestado.EstaAlugado = true;
             emprestimos.Add(emprestimo);
         }
