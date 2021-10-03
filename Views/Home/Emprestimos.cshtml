@@ -1,0 +1,11 @@
+﻿@model IEnumerable<EmprestimoGato>
+
+@foreach (var emprestimo in Model)
+            {
+                <div>
+                    <pre>
+                    Cliente: @emprestimo.NomeCliente
+                    Gato: @emprestimo.NomeGato
+                    </pre>
+                </div>
+            }

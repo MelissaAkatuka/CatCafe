@@ -14,19 +14,19 @@ namespace CatCafe.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IRepositorio _repositorio;
 
-        public HomeController(ILogger<HomeController> logger, IRepositorio repositorio)
+        public HomeController(ILogger<HomeController> logger) // IRepositorio repositorio)
         {
             _logger = logger;
-            _repositorio = repositorio;
+            //_repositorio = repositorio;
         }
 
-        public IActionResult CadastroGatos()
+        public IActionResult CadastroGato()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult CadastroGatos(CadastroGato cadastroGatos)
+        public IActionResult CadastroGato(CadastroGato cadastroGatos)
         {
             //if(cadastroGatos.EhAlugavel != null)
             //{
@@ -53,7 +53,7 @@ namespace CatCafe.Controllers
             //retorna lista dos gatos
             var listaGatos = Repositorio.Gatos.Where(x => x.EhAlugavel == true && x.EstaAlugado == false).Select(x =>
             {//seleciona os itens da lista
-                return new SelectListItem() { Text = x.Nome, Value = x.Id.ToString() };
+                return new SelectListItem() { Text = x.Nome, Value = x.Nome };
             });
 
             //coloca os itens na ViewBag da View,
@@ -65,19 +65,28 @@ namespace CatCafe.Controllers
         [HttpPost]
         public IActionResult EmprestimoGato(EmprestimoGato emprestimo)
         {
-            if (ModelState.IsValid)
+            var gatoEmprestado = Repositorio.Gatos.FirstOrDefault(x => x.Nome == emprestimo.NomeGato);
+
+            if (ModelState.IsValid && gatoEmprestado != null)
             {
-                Repositorio.AdicionaEmprestimo(emprestimo);
+                Repositorio.AdicionaEmprestimo(emprestimo, gatoEmprestado);
                 return RedirectToAction("Index");
             }
 
             var listaGatos = Repositorio.Gatos.Where(x => x.EhAlugavel == true && x.EstaAlugado == false).Select(x =>
             {
-                return new SelectListItem() { Text = x.Nome, Value = x.Id.ToString() };
+                return new SelectListItem() { Text = x.Nome, Value = x.Nome };
             });
 
             ViewBag.bagListaGatos = listaGatos;
             return View(emprestimo);
+        }
+
+        public IActionResult Emprestimos()
+        {
+            var emprestimos = Repositorio.Emprestimos;
+
+            return View(emprestimos);
         }
 
         //public IActionResult EdicaoEmprestimo(int id)

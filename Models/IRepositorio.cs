@@ -11,7 +11,7 @@ namespace CatCafe.Models
         static IEnumerable<CadastroGato> Gatos { get; set; }
 
         static List<EmprestimoGato> emprestimos { get; set; }
-        static IEnumerable<EmprestimoGato> Emprestimos { get; }
+        static IEnumerable<EmprestimoGato> Emprestimos { get; set; }
 
         void AdicionaGato(CadastroGato cadastroGatos) {}
 
