@@ -101,9 +101,13 @@ namespace CatCafe.Controllers
 
         public IActionResult Emprestimos()
         {
-            var emprestimos = Repositorio.Emprestimos;
+            var viewModel = new EmprestimosViewModel()
+            {
+                Emprestimos = Repositorio.Emprestimos,
+                Search = string.Empty 
+            };
 
-            return View(emprestimos);
+            return View(viewModel);
         }
 
 

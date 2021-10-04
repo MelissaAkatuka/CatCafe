@@ -27,7 +27,6 @@ namespace CatCafe.Models
         public DateTime DataEmprestimo { get; set; }
 
         [Required(ErrorMessage = "A data para devolução é obrigatória")]
-        [DataType(DataType.DateTime, ErrorMessage = "Formato de data inválido")]
         public DateTime DataDevolucao { get; set; }
 
         public DateTime? DataDevolvido { get; set; }

@@ -7,17 +7,55 @@
 <form method="post">
     <label asp-for="Search"></label>
     <input type="text" asp-for="Search" />
-    <button type="submit"></button>
+    <button type="submit" class="btn btn-outline-primary">Buscar</button>
 </form>
 
-@foreach (var emprestimo in Model.Emprestimos)
-{
-    <div>
-        @if (emprestimo.NomeCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) || emprestimo.NomeGato.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase)
-            || emprestimo.TelefoneCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) || emprestimo.EmailCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase)) {
-        <pre>
-                    Cliente: @emprestimo.NomeCliente
-                    Gato: @emprestimo.NomeGato
-                    </pre>}
-    </div>
-}
+<table class="tabelaListagem">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome do cliente</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Nome do gato</th>
+            <th>Data de empréstimo</th>
+            <th>Data de devolução</th>
+            <th>Data que foi devolvido</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+
+
+
+    @foreach (var emprestimo in Model.Emprestimos)
+    {
+
+        if (!string.IsNullOrWhiteSpace(Model.Search) && emprestimo.NomeCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) || emprestimo.NomeGato.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase)
+        || emprestimo.TelefoneCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) || emprestimo.EmailCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase))
+        {
+            <tbody>
+                <tr>
+                    <td>@emprestimo.Id</td>
+                    <td>@emprestimo.NomeCliente</td>
+                    <td>@emprestimo.EmailCliente</td>
+                    <td>@emprestimo.TelefoneCliente</td>
+                    <td>@emprestimo.NomeGato</td>
+                    <td>@emprestimo.DataEmprestimo</td>
+                    <td>@emprestimo.DataDevolucao</td>
+                    <td>@emprestimo.DataDevolvido</td>
+                    <td>Editar</td>
+                    <td>Excluir</td>
+                </tr>
+            </tbody>
+        }
+
+        else
+        {
+         <p>Não há resultados com esse termo</p>
+        }
+
+     }
+        </table>
+
+
