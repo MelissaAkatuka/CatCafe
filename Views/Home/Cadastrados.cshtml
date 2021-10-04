@@ -1,6 +1,21 @@
-﻿@model IEnumerable<CadastroGato>
+﻿@model CatCafe.ViewModels.CadastradosViewModel
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Search"></label>
+        <input asp-for="Search" />
+        <input type="submit" class="btn btn-outline-primary"/>
+    </div>
+
+</form>
+
 <pre>Nome | Especie | É Alugável? | Está Alugado?</pre>
-@foreach (var cadastrados in Model)
+
+@foreach (var cadastrados in Model.Cadastrados)
 {
-    <pre>@cadastrados.Nome | @cadastrados.Especie | @cadastrados.EhAlugavel | @cadastrados.EstaAlugado</pre>
+    var cssClass = !string.IsNullOrWhiteSpace(Model.Search) && cadastrados.Nome.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) ? "text-info" : "";
+
+        <pre class="@cssClass">@cadastrados.Nome | @cadastrados.Especie | @cadastrados.EhAlugavel | @cadastrados.EstaAlugado</pre>
+
+    
 }
