@@ -1,27 +1,39 @@
 ﻿@model EmprestimoGato
 
+@{
+    ViewData["Title"] = "Empreste um gato";
+}
+
 <h1>Empréstimo de um gato</h1>
 
 <form method="post">
     <div asp-validation-summary="All"></div>
-        <div>
-            <label asp-for="NomeCliente">Nome do cliente</label>
-            <input asp-for="NomeCliente" />
-        </div>
-        <div>
-            <label asp-for="EmailCliente">Email do cliente</label>
-            <input asp-for="EmailCliente" />
-        </div>
-        <div>
-            <label asp-for="TelefoneCliente">Telefone do cliente</label>
-            <input asp-for="TelefoneCliente"/>
-        </div>
-        <div>
-            <label asp-for="NomeGato">Selecione o gato que será emprestado</label>
-           <select asp-for="NomeGato" asp-items="@ViewBag.bagListaGatos">
+    <div>
+        <label asp-for="NomeCliente">Nome do cliente</label>
+        <input asp-for="NomeCliente" />
+    </div>
+    <div>
+        <label asp-for="EmailCliente">Email do cliente</label>
+        <input asp-for="EmailCliente" />
+    </div>
+    <div>
+        <label asp-for="TelefoneCliente">Telefone do cliente</label>
+        <input asp-for="TelefoneCliente"/>
+    </div>
+    <div>
+        <label asp-for="NomeGato">Selecione o gato que será emprestado</label>
+        <select asp-for="NomeGato" asp-items="@ViewBag.bagListaGatos">
             <option value="">Escolha a opção</option>
-           </select>
-        </div>    
+        </select>
+    </div>
+    <div>
+        <label asp-for="DataEmprestimo">Data do empréstimo</label>
+        <input asp-for="DataEmprestimo" />
+    </div>
+    <div>
+        <label asp-for="DataDevolucao">Data de devolução</label>
+        <input asp-for="DataDevolucao" />
+    </div>
     <button type="submit">Emprestar</button>
 
 </form>

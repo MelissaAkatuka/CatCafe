@@ -10,24 +10,8 @@ namespace CatCafe.Models
     {
         //retorna lista de todas as cofirmações
         //guarda a lista de todas as submissões
-        public static IEnumerable<CadastroGato> Gatos { get => gatos; }
-
-        private static List<EmprestimoGato> emprestimos = new List<EmprestimoGato>();
-        public static IEnumerable<EmprestimoGato> Emprestimos { get => emprestimos; }
-
-        public static void AdicionaGato(CadastroGato cadastroGatos)
-        {
-            gatos.Add(cadastroGatos);
-        }
-
-        public static void AdicionaEmprestimo(EmprestimoGato emprestimo, CadastroGato gatoEmprestado)
-        {
-            gatoEmprestado.EstaAlugado = true;
-            emprestimos.Add(emprestimo);
-        }
-
         private static List<CadastroGato> gatos = new List<CadastroGato>()
-        {
+        { 
             new CadastroGato
             {
                 Id = 1,
@@ -46,7 +30,31 @@ namespace CatCafe.Models
             }
 
         };
-        }
-}
+        public static IEnumerable<CadastroGato> Gatos { get => gatos; }
 
-        
+        private static List<EmprestimoGato> emprestimos = new List<EmprestimoGato>()
+        {
+            new EmprestimoGato
+            {
+                NomeCliente = "Beatriz Resende",
+                NomeGato = "Miau",
+                EmailCliente = "bcastroresende@gmail.com",
+                TelefoneCliente = "62 12345678",
+                DataEmprestimo = DateTime.Now,
+                DataDevolucao = Convert.ToDateTime("10/10/2021")
+            }
+        };
+        public static IEnumerable<EmprestimoGato> Emprestimos { get => emprestimos; }
+
+        public static void AdicionaGato(CadastroGato cadastroGatos)
+        {
+            gatos.Add(cadastroGatos);
+        }
+
+        public static void AdicionaEmprestimo(EmprestimoGato emprestimo, CadastroGato gatoEmprestado)
+        {
+            gatoEmprestado.EstaAlugado = true;
+            emprestimos.Add(emprestimo);
+        }
+    }
+}

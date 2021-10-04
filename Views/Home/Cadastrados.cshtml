@@ -1,5 +1,9 @@
 ﻿@model CatCafe.ViewModels.CadastradosViewModel
 
+@{
+    ViewData["Title"] = "Gatos cadastrados";
+}
+
 <head>
     <title>Lista de gatos</title>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -7,14 +11,14 @@
 
 <body>
     <h3>Lista de gatos cadastrados</h3>
-        <form method="post">
-            <div class="form-group">
-                <label asp-for="Search"></label>
-                <input asp-for="Search" />
-                <input type="submit" class="btn btn-outline-primary" />
-            </div>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Search"></label>
+            <input asp-for="Search" />
+            <input type="submit" class="btn btn-outline-primary" />
+        </div>
 
-        </form>
+    </form>
 
         <table class="tabelaListagem">
             <thead>
@@ -29,10 +33,10 @@
                 </tr>
             </thead>
 
-            <tbody>
-                @foreach (var cadastrados in Model.Cadastrados)
-                {
-                    var cssClass = !string.IsNullOrWhiteSpace(Model.Search) && cadastrados.Nome.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) ? "text-info" : "";
+        <tbody>
+            @foreach (var cadastrados in Model.Cadastrados)
+            {
+                var cssClass = !string.IsNullOrWhiteSpace(Model.Search) && cadastrados.Nome.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) ? "text-info" : "";
 
                     <tr class="@cssClass">
                         <td>@cadastrados.Id</td>
