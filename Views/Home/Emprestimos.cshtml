@@ -1,11 +1,15 @@
 ﻿@model IEnumerable<EmprestimoGato>
 
+@{
+    ViewData["Title"] = "Empréstimos";
+}
+
 @foreach (var emprestimo in Model)
-            {
-                <div>
-                    <pre>
+{
+    <div>
+        <pre>
                     Cliente: @emprestimo.NomeCliente
                     Gato: @emprestimo.NomeGato
                     </pre>
-                </div>
-            }
+    </div>
+}

@@ -1,4 +1,9 @@
 ﻿@model IEnumerable<CadastroGato>
+
+@{
+    ViewData["Title"] = "Gatos cadastrados";
+}
+
 <pre>Nome | Especie | É Alugável? | Está Alugado?</pre>
 @foreach (var cadastrados in Model)
 {
