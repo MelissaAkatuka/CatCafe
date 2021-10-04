@@ -1,11 +1,51 @@
-﻿@model IEnumerable<CadastroGato>
+﻿@model CatCafe.ViewModels.CadastradosViewModel
 
 @{
     ViewData["Title"] = "Gatos cadastrados";
 }
 
-<pre>Nome | Especie | É Alugável? | Está Alugado?</pre>
-@foreach (var cadastrados in Model)
-{
-    <pre>@cadastrados.Nome | @cadastrados.Especie | @cadastrados.EhAlugavel | @cadastrados.EstaAlugado</pre>
-}
+<head>
+    <title>Lista de gatos</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <h3>Lista de gatos cadastrados</h3>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Search"></label>
+            <input asp-for="Search" />
+            <input type="submit" class="btn btn-outline-primary" />
+        </div>
+
+    </form>
+
+    <table class="tabelaListagem">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Espécie</th>
+                <th>É Alugável?</th>
+                <th>Está Alugado?</th>
+                <th>Editar</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var cadastrados in Model.Cadastrados)
+            {
+                var cssClass = !string.IsNullOrWhiteSpace(Model.Search) && cadastrados.Nome.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) ? "text-info" : "";
+
+                <tr class="@cssClass">
+                    <td>@cadastrados.Nome</td>
+                    <td>@cadastrados.Especie</td>
+                    <td>@cadastrados.EhAlugavel</td>
+                    <td>@cadastrados.EstaAlugado</td>
+                    <td>Editar</td>
+                    <td>Excluir</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

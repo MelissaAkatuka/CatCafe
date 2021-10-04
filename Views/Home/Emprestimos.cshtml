@@ -1,15 +1,23 @@
-﻿@model IEnumerable<EmprestimoGato>
+﻿@model EmprestimosViewModel
 
 @{
     ViewData["Title"] = "Empréstimos";
 }
 
-@foreach (var emprestimo in Model)
+<form method="post">
+    <label asp-for="Search"></label>
+    <input type="text" asp-for="Search" />
+    <button type="submit"></button>
+</form>
+
+@foreach (var emprestimo in Model.Emprestimos)
 {
     <div>
+        @if (emprestimo.NomeCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) || emprestimo.NomeGato.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase)
+            || emprestimo.TelefoneCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) || emprestimo.EmailCliente.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase)) {
         <pre>
                     Cliente: @emprestimo.NomeCliente
                     Gato: @emprestimo.NomeGato
-                    </pre>
+                    </pre>}
     </div>
 }

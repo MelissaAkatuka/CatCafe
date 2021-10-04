@@ -1,4 +1,5 @@
 ﻿using CatCafe.Models;
+using CatCafe.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
@@ -45,9 +46,23 @@ namespace CatCafe.Controllers
         public IActionResult Cadastrados()
         {
             //retorna lista dos gatos
-            var listaGatos = Repositorio.Gatos;
+            //var listaGatos = Repositorio.Gatos;
 
-            return View(listaGatos);
+            var viewModel = new CadastradosViewModel()
+            {
+                Cadastrados = Repositorio.Gatos,
+                Search = string.Empty
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrados(CadastradosViewModel viewModel)
+        {
+            viewModel.Cadastrados = Repositorio.Gatos;
+
+            return View(viewModel);
         }
 
         public IActionResult EmprestimoGato()
@@ -89,6 +104,15 @@ namespace CatCafe.Controllers
             var emprestimos = Repositorio.Emprestimos;
 
             return View(emprestimos);
+        }
+
+
+        [HttpPost]
+        public IActionResult Emprestimos(EmprestimosViewModel viewModel)
+        {
+            viewModel.Emprestimos = Repositorio.Emprestimos;
+
+            return View(viewModel);
         }
 
         //public IActionResult EdicaoEmprestimo(int id)

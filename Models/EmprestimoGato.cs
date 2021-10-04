@@ -14,6 +14,7 @@ namespace CatCafe.Models
         public string NomeCliente { get; set; }
 
         [Required(ErrorMessage = "O email do cliente é obrigatório")]
+        [EmailAddress(ErrorMessage = "Formato de email inválido")]
         public string EmailCliente { get; set;  }
 
         [Required(ErrorMessage = "O telefone do cliente é obrigatório")]
@@ -26,6 +27,7 @@ namespace CatCafe.Models
         public DateTime DataEmprestimo { get; set; }
 
         [Required(ErrorMessage = "A data para devolução é obrigatória")]
+        [DataType(DataType.DateTime, ErrorMessage = "Formato de data inválido")]
         public DateTime DataDevolucao { get; set; }
 
         public DateTime? DataDevolvido { get; set; }
