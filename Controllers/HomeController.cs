@@ -152,7 +152,9 @@ namespace CatCafe.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var gatosDisponiveis = Repositorio.Gatos.Where(x => x.EhAlugavel == true && x.EstaAlugado == false);
+
+            return View(gatosDisponiveis);
         }
 
         public IActionResult Privacy()

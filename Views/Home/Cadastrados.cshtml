@@ -20,32 +20,34 @@
 
     </form>
 
-    <table class="tabelaListagem">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Espécie</th>
-                <th>É Alugável?</th>
-                <th>Está Alugado?</th>
-                <th>Editar</th>
-                <th>Excluir</th>
-            </tr>
-        </thead>
+        <table class="tabelaListagem">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Espécie</th>
+                    <th>É Alugável?</th>
+                    <th>Está Alugado?</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
 
         <tbody>
             @foreach (var cadastrados in Model.Cadastrados)
             {
                 var cssClass = !string.IsNullOrWhiteSpace(Model.Search) && cadastrados.Nome.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) ? "text-info" : "";
 
-                <tr class="@cssClass">
-                    <td>@cadastrados.Nome</td>
-                    <td>@cadastrados.Especie</td>
-                    <td>@cadastrados.EhAlugavel</td>
-                    <td>@cadastrados.EstaAlugado</td>
-                    <td>Editar</td>
-                    <td>Excluir</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</body>
+                    <tr class="@cssClass">
+                        <td>@cadastrados.Id</td>
+                        <td>@cadastrados.Nome</td>
+                        <td>@cadastrados.Especie</td>
+                        <td>@cadastrados.EhAlugavel</td>
+                        <td>@cadastrados.EstaAlugado</td>
+                        <td>Editar</td>
+                        <td>Excluir</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+ </body>
