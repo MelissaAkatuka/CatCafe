@@ -1,6 +1,5 @@
 ﻿@model CatCafe.ViewModels.CadastradosViewModel
 
-
 <head>
     <title>Lista de gatos</title>
     <link rel="stylesheet" href="~/css/site.css" />
@@ -20,6 +19,7 @@
         <table class="tabelaListagem">
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Nome</th>
                     <th>Espécie</th>
                     <th>É Alugável?</th>
@@ -35,6 +35,7 @@
                     var cssClass = !string.IsNullOrWhiteSpace(Model.Search) && cadastrados.Nome.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) ? "text-info" : "";
 
                     <tr class="@cssClass">
+                        <td>@cadastrados.Id</td>
                         <td>@cadastrados.Nome</td>
                         <td>@cadastrados.Especie</td>
                         <td>@cadastrados.EhAlugavel</td>

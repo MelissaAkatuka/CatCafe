@@ -2,12 +2,50 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model IEnumerable<CadastroGato>
+
 <div class="text-center">
     <h1 class="display-4">Bem vindo</h1>
     <pre>
-        <a asp-action="CadastroGato">Cadastre o gatinho</a>
-        <a asp-action="Cadastrados">Veja os gatos disponíveis</a>
-        <a asp-action="EmprestimoGato">Empreste um gato</a>
-        <a asp-action="Emprestimos">Veja os empréstimos</a>
-    </pre>  
+    <a asp-action="CadastroGato">Cadastre o gatinho</a>
+    <a asp-action="Cadastrados">Veja os gatos disponíveis</a>
+    <a asp-action="EmprestimoGato">Empreste um gato</a>
+    <a asp-action="Emprestimos">Veja os empréstimos</a>
+    </pre>
+
+
+    <h3>Lista de gatos cadastrados</h3>
+
+    <table class="tabelaListagem">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Espécie</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+
+            @foreach (var gatosDisponiveis in Model)
+            {
+                if (gatosDisponiveis != null)
+                {
+                    <tr>c
+                        <td>@gatosDisponiveis.Id</td>
+                        <td>@gatosDisponiveis.Nome</td>
+                        <td>@gatosDisponiveis.Especie</td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td>Não há gatos disponiveis p/ empréstimo</td>
+                    </tr>
+                }
+
+             }
+         </tbody>
+    </table>
 </div>

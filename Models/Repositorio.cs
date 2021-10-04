@@ -10,7 +10,6 @@ namespace CatCafe.Models
     {
         //retorna lista de todas as cofirmações
         //guarda a lista de todas as submissões
-        private static List<CadastroGato> gatos = new List<CadastroGato>();
         public static IEnumerable<CadastroGato> Gatos { get => gatos; }
 
         private static List<EmprestimoGato> emprestimos = new List<EmprestimoGato>();
@@ -26,5 +25,28 @@ namespace CatCafe.Models
             gatoEmprestado.EstaAlugado = true;
             emprestimos.Add(emprestimo);
         }
-    }
+
+        private static List<CadastroGato> gatos = new List<CadastroGato>()
+        {
+            new CadastroGato
+            {
+                Id = 1,
+                Nome = "Miau",
+                Especie = "Siamês",
+                EhAlugavel = true,
+                EstaAlugado = false
+            },
+            new CadastroGato
+            {
+                Id = 2,
+                Nome = "Clóvis",
+                Especie = "SRD",
+                EhAlugavel = true,
+                EstaAlugado = true
+            }
+
+        };
+        }
 }
+
+        
