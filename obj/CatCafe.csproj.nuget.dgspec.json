@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\CatCafe.csproj": {}
+    "C:\\CatCafe\\CatCafe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\CatCafe.csproj": {
+    "C:\\CatCafe\\CatCafe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\CatCafe.csproj",
+        "projectUniqueName": "C:\\CatCafe\\CatCafe.csproj",
         "projectName": "CatCafe",
-        "projectPath": "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\CatCafe.csproj",
-        "packagesPath": "C:\\Users\\bcast\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bcast\\Documents\\CODING\\.NET + Angular (aulas)\\.NET\\CatCafe\\CatCafe\\obj\\",
+        "projectPath": "C:\\CatCafe\\CatCafe.csproj",
+        "packagesPath": "C:\\Users\\paulo\\.nuget\\packages\\",
+        "outputPath": "C:\\CatCafe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bcast\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\paulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }
