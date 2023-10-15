@@ -42,8 +42,8 @@
                         <td>@cadastrados.Id</td>
                         <td>@cadastrados.Nome</td>
                         <td>@cadastrados.Especie</td>
-                        <td>@cadastrados.EhAlugavel</td>
-                        <td>@cadastrados.EstaAlugado</td>
+                        <td>@(cadastrados.EhAlugavel ? "Sim" : "Não")</td>
+                        <td>@(cadastrados.EstaAlugado ? "Sim" : "Não")</td>
                         <td>Editar</td>
                         <td>Excluir</td>
                     </tr>
