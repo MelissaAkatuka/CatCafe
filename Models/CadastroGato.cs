@@ -23,5 +23,6 @@ namespace CatCafe.Models
 
         [DisplayName("Está alugado")]
         public bool EstaAlugado { get; set; }
+        public string Alugavel => EhAlugavel ? "Sim" : "Não";
     }
 }
